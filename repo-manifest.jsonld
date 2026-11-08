@@ -8,7 +8,8 @@
     {
       "@id": "https://repolex.ai/r/langchain-ai/langchain-litellm/commit/77cacd9ac139fdeeb4dbcf9b597c7fd29edb12b0",
       "git:hexsha": "77cacd9ac139fdeeb4dbcf9b597c7fd29edb12b0",
-      "repolex:parseStatus": "ast_complete"
+      "repolex:parseStatus": "parsed",
+      "repolex:parsedAt": "2026-11-08T00:52:51.512172+00:00"
     },
     {
       "@id": "https://repolex.ai/r/langchain-ai/langchain-litellm/commit/aec47023a45eec748998526d9dac10f7c231da4f",
