@@ -1,1 +1,159 @@
-Initializing
+# Repolex Knowledge Graph of langchain-ai/langchain-litellm
+
+RDF knowledge graph data for [langchain-ai/langchain-litellm](https://github.com/langchain-ai/langchain-litellm), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download langchain-ai/langchain-litellm
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 77cacd9ac139fdeeb4dbcf9b597c7fd29edb12b0
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 77cacd9ac139fdeeb4dbcf9b597c7fd29edb12b0
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 00dfb145ebbe8457ab48664fdd6664e3ca08bdd6.nq.gz
+│   ├── 0197791bb3864938b68b3578b11fc8f50132e448.nq.gz
+│   ├── 0442e9290d92a940cf02d073c5450c2b1aba064d.nq.gz
+│   ├── 08e0951fab7b21440d40e94c1fce92dd30f0cba7.nq.gz
+│   ├── 0b900caadb6f3910deed2f08d98f9d05f6229b08.nq.gz
+│   ├── 0d45b2a28ff99c9ce51b61bb00a74784125c7225.nq.gz
+│   ├── 10835573d6c9ab617ce40b572c2fb3d8ae6a9d88.nq.gz
+│   ├── 184761ad84a29cb7c12cd9d7a20fc73e4c4a1474.nq.gz
+│   ├── 19ccec1480c01ae026fc26507c043b2a24b171de.nq.gz
+│   ├── 1aa252e8c8b4fa7c6e6382ad800a76902084debd.nq.gz
+│   ├── 1b44d9338ff6a9119043a01132a20398b0b4b873.nq.gz
+│   ├── 239494f6675e7413aecc0299252a7b6dba632988.nq.gz
+│   ├── 2627b5f200d8d234e491400b5cb922ace7318afc.nq.gz
+│   ├── 26cb4053c5679b571f6b754d18c271950344acba.nq.gz
+│   ├── 2c0733315e415bfb5e5b353f9996ecd964d395b2.nq.gz
+│   ├── 34c73e3a9a26d92ab7447bd1d05d848ba7dcb8cc.nq.gz
+│   ├── 39f13466b200eea8b1a8ef238accf622f8e4b921.nq.gz
+│   ├── 3ded6936d49ae74b86b27c4812ccbb4801f4b78c.nq.gz
+│   ├── 3e35ba3524e0f7a128c0783688b53f311fcfa4df.nq.gz
+│   ├── 40ce913b3844980ee0c59297cc4b6f5866cc2d7f.nq.gz
+│   ├── 40d3f5c61de659eb6394bdb3a87c0270c7d168b1.nq.gz
+│   ├── 463623ed6f7a73c03df96dd5eca3565a06c01166.nq.gz
+│   ├── 4ed6e31322ae17c7edebe6b3c253a653412072f1.nq.gz
+│   ├── 4ed92ad4a312914d86e4fcd997e7695f4bdf49ce.nq.gz
+│   ├── 53352087028e82397e4756cf908b5c6bacf06e49.nq.gz
+│   ├── 5349be76fc4535e93c07509cc52ff6a15332f18a.nq.gz
+│   ├── 53b4a1e02e32bc93ff2761c9bcbbbb1e587d447a.nq.gz
+│   ├── 57733ed04091ba84f340c9da7e89a8d40b6b1ed5.nq.gz
+│   ├── 57f3755b91952cec237b56ae8e6bbad2cfd98ba3.nq.gz
+│   ├── 5a569912ceee6cec4b7d19462edd509bc3fb9a4a.nq.gz
+│   ├── 5c84beefd3ac33cabaafd259409506ff31936899.nq.gz
+│   ├── 62a8f91d200ad09249a2cebafc3b433a3cb5ae66.nq.gz
+│   ├── 6553efd584b842661c2e20142a49806598a6917d.nq.gz
+│   ├── 68fb9ba36dca23e1c91268d3ba42b7ce51342734.nq.gz
+│   ├── 690795da1823f6891235263d341f46a5e0933303.nq.gz
+│   ├── 6fb231fac9df05495f3d3e1d3ff3029f4dd2e6b3.nq.gz
+│   ├── 6fdfe4986868c18a3749343dfeee1cdba062c533.nq.gz
+│   ├── 701d770363565c18df8fc0ebde1854c25c55e0bb.nq.gz
+│   ├── 7bc320a22a46ae21ca1347dad87491f0793897fd.nq.gz
+│   ├── 7c9ed8edb19d78a4d3ea4ec8faeeef32192ec79a.nq.gz
+│   ├── 805837e0a0b9447e77b35aacbfa3917b3ec45f59.nq.gz
+│   ├── 840eb157188c198562c4c96a04e3bcb6f5228fbb.nq.gz
+│   ├── 85d6fd8c2fc8f85519ae20c09d589f0effa5465e.nq.gz
+│   ├── 88621e630b98bea4c864e99cee6b4af6ea2c918a.nq.gz
+│   ├── 896ccd290aa84b94b385579def82d35963e22e85.nq.gz
+│   ├── 8aa62216e8b7f5790261c03a1c76b5e920e96f8d.nq.gz
+│   ├── 9377cfa1b886a31f0337d84f553724bf2376e07a.nq.gz
+│   ├── 96926f850dc3dc7382dae078035fb19d8dc983e3.nq.gz
+│   ├── 96b7337b4fee5104b4d4e52b8b11c458cb30e22b.nq.gz
+│   ├── 9ee902cbd9c0a0631f3630b38313eecdf68039ef.nq.gz
+│   ├── a6684f9e1eea8890f49e0ec75628ccfcedf3976f.nq.gz
+│   ├── a66f9f462ac37dff4bb24ed292a636c30a93948a.nq.gz
+│   ├── a7bd0b621394af192553a6dd281f43962f0a0285.nq.gz
+│   ├── a9d558db22a29121317829554a26d8d706b0b4dc.nq.gz
+│   ├── ab48b745d196ba3d754c6aa8626f791b73cc27b0.nq.gz
+│   ├── ab6a17e54b2ef69307630117160fbba95e84e83a.nq.gz
+│   ├── b1ff1a4700e678269ddecd75baf65e16c3f45e2e.nq.gz
+│   ├── bfb8747f18624001786799936f04585c29f66056.nq.gz
+│   ├── c57f554f44440dc608e47b7915fc226a7fb707a9.nq.gz
+│   ├── c92e1cc5ce9b407cb3c1be2e91ce559bdbf34b2d.nq.gz
+│   ├── cac90b29ec6864239a44111760be0746e6847850.nq.gz
+│   ├── cc5cccce21a5469a55ad0bc011ed88345f8b9292.nq.gz
+│   ├── cfef6c06e2ce4fec560a343174498efce6802f70.nq.gz
+│   ├── d774725db59104924c1ea3ec6c1274a071085f7b.nq.gz
+│   ├── da1db0e8f5f33c0b9da714a1d574428de71b236d.nq.gz
+│   ├── dbaabb67681bc924e2dbf558a3eb20fff04c7428.nq.gz
+│   ├── e1176c98073879876dd5d60fd6e2e37d3df12971.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e8ad50c440da6931729f2ca0c849850715381afb.nq.gz
+│   ├── e8f18cac753b483b0c632dfa38afb565febe1f87.nq.gz
+│   ├── ed1e14e5b042a7882ab782f048f717b47743a145.nq.gz
+│   ├── edfa85c19808e5681360ff4cab1db941e7690d91.nq.gz
+│   ├── f07cb2a75a4c8564a238c254ec25beef822e4573.nq.gz
+│   ├── f3a46553f4b371d1ab384b12b0aa57f7415539ee.nq.gz
+│   ├── f3be94197c1fbc2f5a4dcb35a3364900404f62c0.nq.gz
+│   ├── f7733304045a4c76e0ffc3701df267ce2550f84b.nq.gz
+│   ├── fa52184b7859601010ba72b7a1d08d7e0d0eeb7d.nq.gz
+│   ├── fb65a29d41047e56ba8a7735793ddec82c6b1529.nq.gz
+│   ├── fc0602feecdd6748623c852ab534e1ca612673c7.nq.gz
+│   └── fdccc1c0b09fac673ff6c2d1a43a95b2ce38c1f8.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 77cacd9ac139fdeeb4dbcf9b597c7fd29edb12b0.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 88 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[langchain-ai/langchain-litellm](https://github.com/langchain-ai/langchain-litellm)
+
+---
+*Parsed on 2026-11-08 by [repolex](https://repolex.ai)*

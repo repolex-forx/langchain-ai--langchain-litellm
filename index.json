@@ -1,0 +1,11 @@
+{
+  "org": "langchain-ai",
+  "repo": "langchain-litellm",
+  "versions": [
+    {
+      "commit": "77cacd9ac139fdeeb4dbcf9b597c7fd29edb12b0",
+      "tag": "",
+      "parsed_at": "2026-11-08T00:52:51.538739+00:00"
+    }
+  ]
+}
